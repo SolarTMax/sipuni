@@ -9,9 +9,7 @@ class TextTransformer {
 
 	function __construct($text, $options = []) {
 
-		//mb_internal_encoding("UTF-8"); //??
-
-		$this->text = $text;
+		$this->text = strval($text);
 
 		foreach ($options as $method) {
 			if (in_array($method, self::OPTION_METHOD)) {
